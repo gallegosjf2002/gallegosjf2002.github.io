@@ -3,114 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jorge Gallegos | Physics Portfolio</title>
+<title>Jorge Gallegos | Academic Portfolio</title>
 
 <style>
 :root{
     --emerald:#0f9d7a;
     --emerald-dark:#0b7a60;
-    --emerald-soft:#e6f7f2;
     --text:#1a1f2b;
-    --gray:#6b7280;
 }
 
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: white;
-    color: var(--text);
-}
+body{margin:0;font-family:Segoe UI;background:white;color:var(--text);}
 
-header {
-    background: linear-gradient(135deg, var(--emerald), var(--emerald-dark));
-    color: white;
-    padding: 70px 20px;
-    text-align: center;
-}
+header{background:linear-gradient(135deg,var(--emerald),var(--emerald-dark));color:white;padding:60px;text-align:center;}
 
-header h1 {
-    margin: 0;
-    font-size: 3em;
-}
+.profile-pic{width:150px;height:150px;border-radius:50%;object-fit:cover;border:4px solid white;margin-bottom:15px;}
 
-header p {
-    font-size: 1.2em;
-    opacity: 0.9;
-}
+nav{display:flex;justify-content:center;gap:20px;padding:15px;border-bottom:1px solid #eee;}
+nav a{color:var(--emerald);text-decoration:none;font-weight:bold;}
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 15px;
-    background: white;
-    border-bottom: 1px solid #eee;
-}
+section{max-width:1000px;margin:auto;padding:40px 20px;}
+.card{background:white;padding:25px;margin-bottom:25px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.05);}
+h2{color:var(--emerald);}
 
-nav a {
-    color: var(--emerald);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover{
-    color: var(--emerald-dark);
-}
-
-section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.card {
-    background: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-}
-
-h2 {
-    color: var(--emerald);
-    margin-bottom: 20px;
-}
-
-ul {
-    line-height: 1.6;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 18px;
-    background: var(--emerald);
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    margin: 5px;
-}
-
-.button:hover{
-    background: var(--emerald-dark);
-}
-
-img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    background: var(--emerald-soft);
-    color: var(--gray);
-}
+.button{display:inline-block;margin:5px;padding:10px 15px;background:var(--emerald);color:white;border-radius:5px;text-decoration:none;}
 
 </style>
 </head>
@@ -118,82 +33,93 @@ footer {
 <body>
 
 <header>
-    <h1>Jorge Gallegos</h1>
-    <p>BSc in Physics </p>
+    <img src="images/profile.jpg" class="profile-pic" alt="Profile Photo">
+    <h1>Jorge Fabricio Gallegos Maldonado</h1>
+    <p>BSc in Physics | Aspiring PhD in Theoretical & Computational Astrophysics</p>
+    <p>
+        <a class="button" href="mailto:gallegosjf2002@gmail.com">Email</a>
+        <a class="button" href="https://linkedin.com/in/jorge-gallegos-4514b1245" target="_blank">LinkedIn</a>
+        <a class="button" href="https://github.com/gallegosjf2002" target="_blank">GitHub</a>
+    </p>
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#projects">Projects</a>
-    <a href="#documents">Documents</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#experience">Experience</a>
+<a href="#publications">Publications</a>
+<a href="#projects">Projects</a>
+<a href="#certifications">Certifications</a>
+<a href="#awards">Awards</a>
 </nav>
 
 <section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-        <p>Prospective theoretical and computational astrophysicist with strong training in General Relativity, relativistic fluid dynamics, and numerical modeling of compact objects.</p>
-    </div>
+<h2>About Me</h2>
+<div class="card">
+<p>Prospective theoretical and computational astrophysicist with strong training in General Relativity, relativistic fluid dynamics, and numerical modeling of compact objects. Research includes gravitational decoupling and compact stars.</p>
+</div>
 </section>
 
-<section id="research">
-    <h2>Research Experience</h2>
-    <div class="card">
-        <h3>Relativistic Compact Objects</h3>
-        <p>Worked on Einstein field equations, anisotropic fluids, neutron star models and stability analysis.</p>
-    </div>
+<section id="education">
+<h2>Education</h2>
+<div class="card">
+<h3>BSc in Physics – ESPOCH</h3>
+<p>Final grade: 9.03/10</p>
+<p>Thesis: Relativistic Energy Exchange between a Polytrope and a Wyman IIa Fluid</p>
+</div>
+</section>
 
-    <div class="card">
-        <h3>Magnetic Field Simulation</h3>
-        <p>Developed GPU-accelerated simulations for Helmholtz and crossed coils with experimental validation.</p>
-    </div>
+<section id="experience">
+<h2>Experience</h2>
+<div class="card">
+<h3>Research Assistant – Magnetic Simulation</h3>
+<p>Finite-element simulations, GPU computing, experimental validation.</p>
+</div>
+
+<div class="card">
+<h3>Physics Instructor</h3>
+<p>Teaching physics and mathematics, mentoring students.</p>
+</div>
+</section>
+
+<section id="publications">
+<h2>Publications</h2>
+<div class="card">
+<p>Energy exchange between a relativistic polytrope and a Wyman IIa fluid.</p>
+</div>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-        <h3>Avatar Tech</h3>
-        <p>Satellite data visualization platform for climate resilience.</p>
-    </div>
+<h2>Projects</h2>
+<div class="card">
+<h3>Avatar Tech</h3>
+<p>Satellite data platform.</p>
+<a class="button" href="https://drive.google.com/file/d/1dVZ_u94TOkqpP0eWzNCYDIO69fYla2Po/view" target="_blank">View Project</a>
+</div>
 
-    <div class="card">
-        <h3>Magnetic Irradiator</h3>
-        <p>Design and simulation of high precision magnetic systems.</p>
-    </div>
+<div class="card">
+<h3>Hawa Pachata</h3>
+<p>Virtual exoplanetarium.</p>
+<a class="button" href="https://drive.google.com/file/d/1sj_e-dDKTGbF0oRn0MgyvjUbMkwNAKAt/view" target="_blank">View Project</a>
+</div>
 </section>
 
-<section id="documents">
-    <h2>Documents</h2>
-    <div class="card">
-        <a class="button" href="docs/CV.pdf" target="_blank">CV</a>
-        <a class="button" href="docs/poster.pdf" target="_blank">Poster</a>
-        <a class="button" href="docs/presentation.pdf" target="_blank">Presentation</a>
-    </div>
+<section id="certifications">
+<h2>Certifications</h2>
+<div class="card">
+<a class="button" href="https://drive.google.com/file/d/1KHX0OuXrHPXunTu-LYBjIfdoKdLf0Zem/view">IBM Quantum</a>
+<a class="button" href="https://drive.google.com/file/d/1gyo2XnxKc6pSsETbYRrdG-eYNIQP7nb0/view">USFQ</a>
+<a class="button" href="https://drive.google.com/file/d/1mT3QDF5SYM4C73HPYdrNDrjv_Nkyd-Hu/view">GR & Cosmology</a>
+</div>
 </section>
 
-<section id="gallery">
-    <h2>Gallery</h2>
-    <div class="card">
-        <p>Images of projects, simulations, and events.</p>
-        <img src="images/project1.jpg" alt="Project Image">
-        <img src="images/project2.jpg" alt="Project Image">
-    </div>
+<section id="awards">
+<h2>Awards</h2>
+<div class="card">
+<a class="button" href="https://drive.google.com/file/d/1QQrTvkxQRZasNuXcXVegKIlbIjTc08VV/view">STEM Award</a>
+<a class="button" href="https://drive.google.com/file/d/1v0ro1cNM36F40YfUdTUf0hdd9Fkf0jVq/view">NASA Winner</a>
+</div>
 </section>
-
-<section id="contact">
-    <h2>Contact</h2>
-    <div class="card">
-        <p>Email: gallegosjf2002@gmail.com</p>
-        <p>GitHub: gallegosjf2002</p>
-        <p>LinkedIn: jorge-gallegos-4514b1245</p>
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 Jorge Gallegos</p>
-</footer>
 
 </body>
 </html>
