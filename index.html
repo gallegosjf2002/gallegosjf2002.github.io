@@ -1,27 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Jorge Gallegos</title>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jorge Gallegos | Physics Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b0f1a;
+    color: #e0e6f0;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #11162a;
+    padding: 15px;
+}
+
+nav a {
+    color: #66aaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: #141a2e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #66aaff;
+}
+
+ul {
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #2a5298;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #11162a;
+}
+
+</style>
 </head>
+
 <body>
 
+<header>
     <h1>Jorge Gallegos</h1>
-    <p>Physics Student | Researcher | Space Apps Challenge</p>
+    <p>BSc in Physics | Aspiring PhD in Theoretical & Computational Astrophysics</p>
+</header>
 
+<nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#documents">Documents</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
     <h2>About Me</h2>
-    <p>Focused on magnetic field simulations, relativistic fluids and astrophysics.</p>
+    <div class="card">
+        <p>Prospective theoretical and computational astrophysicist with strong training in General Relativity, relativistic fluid dynamics, and numerical modeling of compact objects.</p>
+    </div>
+</section>
 
+<section id="research">
+    <h2>Research Experience</h2>
+    <div class="card">
+        <h3>Relativistic Compact Objects</h3>
+        <p>Worked on Einstein field equations, anisotropic fluids, and neutron star models.</p>
+    </div>
+
+    <div class="card">
+        <h3>Magnetic Field Simulation</h3>
+        <p>Developed GPU-accelerated simulations for Helmholtz and crossed coils.</p>
+    </div>
+</section>
+
+<section id="projects">
     <h2>Projects</h2>
-    <ul>
-        <li>Magnetic coil simulations</li>
-        <li>NASA Space Apps Challenge</li>
-    </ul>
+    <div class="card">
+        <h3>Avatar Tech</h3>
+        <p>Satellite data visualization platform for climate resilience.</p>
+    </div>
 
-    <h2>Documents</h2>
-    <ul>
-        <li><a href="docs/cv.pdf">Download CV</a></li>
-    </ul>
+    <div class="card">
+        <h3>Magnetic Irradiator</h3>
+        <p>Design and simulation of high precision magnetic systems.</p>
+    </div>
+</section>
+
+<section id="documents">
+    <h2>Documents & Resources</h2>
+    <div class="card">
+        <ul>
+            <li><a class="button" href="docs/CV.pdf" target="_blank">Download CV</a></li>
+            <li><a class="button" href="docs/poster1.pdf" target="_blank">Poster</a></li>
+            <li><a class="button" href="docs/presentation.pdf" target="_blank">Presentation</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: gallegosjf2002@gmail.com</p>
+        <p>GitHub: gallegosjf2002</p>
+        <p>LinkedIn: jorge-gallegos-4514b1245</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Jorge Gallegos</p>
+</footer>
 
 </body>
 </html>
