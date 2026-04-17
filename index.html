@@ -6,16 +6,25 @@
 <title>Jorge Gallegos | Physics Portfolio</title>
 
 <style>
+:root{
+    --emerald:#0f9d7a;
+    --emerald-dark:#0b7a60;
+    --emerald-soft:#e6f7f2;
+    --text:#1a1f2b;
+    --gray:#6b7280;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #0b0f1a;
-    color: #e0e6f0;
+    background: white;
+    color: var(--text);
 }
 
 header {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--emerald), var(--emerald-dark));
+    color: white;
+    padding: 70px 20px;
     text-align: center;
 }
 
@@ -26,44 +35,50 @@ header h1 {
 
 header p {
     font-size: 1.2em;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    background: #11162a;
+    gap: 25px;
     padding: 15px;
+    background: white;
+    border-bottom: 1px solid #eee;
 }
 
 nav a {
-    color: #66aaff;
+    color: var(--emerald);
     text-decoration: none;
     font-weight: bold;
 }
 
+nav a:hover{
+    color: var(--emerald-dark);
+}
+
 section {
-    padding: 40px;
+    padding: 50px 20px;
     max-width: 1000px;
     margin: auto;
 }
 
 .card {
-    background: #141a2e;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 }
 
 h2 {
-    color: #66aaff;
+    color: var(--emerald);
+    margin-bottom: 20px;
 }
 
 ul {
@@ -72,17 +87,29 @@ ul {
 
 .button {
     display: inline-block;
-    padding: 10px 15px;
-    background: #2a5298;
+    padding: 10px 18px;
+    background: var(--emerald);
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     text-decoration: none;
+    margin: 5px;
+}
+
+.button:hover{
+    background: var(--emerald-dark);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background: #11162a;
+    padding: 25px;
+    background: var(--emerald-soft);
+    color: var(--gray);
 }
 
 </style>
@@ -92,7 +119,7 @@ footer {
 
 <header>
     <h1>Jorge Gallegos</h1>
-    <p>BSc in Physics | Aspiring PhD in Theoretical & Computational Astrophysics</p>
+    <p>BSc in Physics </p>
 </header>
 
 <nav>
@@ -100,6 +127,7 @@ footer {
     <a href="#research">Research</a>
     <a href="#projects">Projects</a>
     <a href="#documents">Documents</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -114,12 +142,12 @@ footer {
     <h2>Research Experience</h2>
     <div class="card">
         <h3>Relativistic Compact Objects</h3>
-        <p>Worked on Einstein field equations, anisotropic fluids, and neutron star models.</p>
+        <p>Worked on Einstein field equations, anisotropic fluids, neutron star models and stability analysis.</p>
     </div>
 
     <div class="card">
         <h3>Magnetic Field Simulation</h3>
-        <p>Developed GPU-accelerated simulations for Helmholtz and crossed coils.</p>
+        <p>Developed GPU-accelerated simulations for Helmholtz and crossed coils with experimental validation.</p>
     </div>
 </section>
 
@@ -137,13 +165,20 @@ footer {
 </section>
 
 <section id="documents">
-    <h2>Documents & Resources</h2>
+    <h2>Documents</h2>
     <div class="card">
-        <ul>
-            <li><a class="button" href="docs/CV.pdf" target="_blank">Download CV</a></li>
-            <li><a class="button" href="docs/poster1.pdf" target="_blank">Poster</a></li>
-            <li><a class="button" href="docs/presentation.pdf" target="_blank">Presentation</a></li>
-        </ul>
+        <a class="button" href="docs/CV.pdf" target="_blank">CV</a>
+        <a class="button" href="docs/poster.pdf" target="_blank">Poster</a>
+        <a class="button" href="docs/presentation.pdf" target="_blank">Presentation</a>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="card">
+        <p>Images of projects, simulations, and events.</p>
+        <img src="images/project1.jpg" alt="Project Image">
+        <img src="images/project2.jpg" alt="Project Image">
     </div>
 </section>
 
