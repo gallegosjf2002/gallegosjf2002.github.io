@@ -1,110 +1,120 @@
 <!-- ===================== certificates.html ===================== -->
 <!DOCTYPE html>
-<html>
-<head><link rel="stylesheet" href="style.css"></head>
-<script>
-const cards = document.querySelectorAll('.card');
+<html lang="en">
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-});
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificates | Jorge Gallegos</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
-cards.forEach(card => {
-    observer.observe(card);
-});
-</script>
 <body>
+
 <nav>
 <a href="index.html">Home</a>
 <a href="publications.html">Publications</a>
 <a href="certificates.html">Certificates</a>
 <a href="teaching.html">Teaching</a>
 </nav>
+
 <section id="certificates">
 <h2>Advanced Training & Certifications</h2>
 
-<!-- ===== 2026 ===== -->
-<div class="card">
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-content">
 <h3>Cosmology – PSI Online</h3>
-<p><strong>Perimeter Institute for Theoretical Physics</strong> | 2026 (In Progress)</p>
+<p><strong>Perimeter Institute</strong> | 2026 (In Progress)</p>
+</div>
 </div>
 
-<div class="card">
+<div class="timeline-item">
+<div class="timeline-content">
 <h3>Python: De Cero a Experto</h3>
-<p><strong>Cámara de Comercio Exterior</strong> | 2026 (In Progress)</p>
+<p><strong>Cámara de Comercio Exterior</strong> | 2026</p>
+</div>
 </div>
 
-<div class="card">
+<div class="timeline-item">
+<div class="timeline-content">
 <h3>EL BONGÓ Physics (Erasmus+)</h3>
-<p><strong>International Advanced Training in Physics</strong> | Jan 2026 (In Progress)</p>
+<p><strong>International Advanced Training</strong> | Jan 2026</p>
+</div>
 </div>
 
-<div class="card">
-<h3>Verano Teórico 2026 – Advanced School in Theoretical Physics</h3>
-<p><strong>Advanced School</strong> | Jan 2026</p>
-<p><strong>Topics:</strong> Cosmology, String Theory, Black Hole Perturbations</p>
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>Verano Teórico 2026</h3>
+<p>Cosmology, String Theory, Black Holes</p>
+</div>
 </div>
 
-<!-- ===== 2025 ===== -->
-<div class="card">
+<div class="timeline-item">
+<div class="timeline-content">
 <h3>IBM Quantum – Qiskit Fall Fest</h3>
-<p><strong>IBM Quantum</strong> | Nov 2025</p>
-<p>Developed and executed quantum circuits on real quantum hardware using Qiskit. Focused on quantum algorithms, gate operations, and state-vector simulations.</p>
-<a class="button" href="https://drive.google.com/file/d/1KHX0OuXrHPXunTu-LYBjIfdoKdLf0Zem/view" target="_blank">View Certificate</a>
+<p>Quantum circuits on real hardware</p>
+<a class="button" href="https://drive.google.com/file/d/1KHX0OuXrHPXunTu-LYBjIfdoKdLf0Zem/view" target="_blank">View</a>
+</div>
 </div>
 
-<div class="card">
-<h3>7th Shaw–IAU Workshop: Astronomy for Education</h3>
-<p><strong>International Astronomical Union (OAE–IAU)</strong> | Nov 2025</p>
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>Astroparticle Physics – USFQ</h3>
+<p>Geant4, CORSIKA, ML</p>
+<a class="button" href="https://drive.google.com/file/d/1gyo2XnxKc6pSsETbYRrdG-eYNIQP7nb0/view" target="_blank">View</a>
+</div>
 </div>
 
-<div class="card">
-<h3>Exploring the Universe with AI: New Methods in Radiation and Cosmic Ray Detection</h3>
-<p><strong>Universidad San Francisco de Quito (USFQ)</strong> | Sep 2025</p>
-<p>Advanced training in astroparticle physics and cosmic radiation detection.</p>
-<p>Experience with Geant4, CORSIKA, ARTI, MeIGA, and Machine Learning for astrophysical data analysis.</p>
-<a class="button" href="https://drive.google.com/file/d/1gyo2XnxKc6pSsETbYRrdG-eYNIQP7nb0/view" target="_blank">View Certificate</a>
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>General Relativity & Cosmology – ICTP</h3>
+<p>3-month advanced program</p>
+<a class="button" href="https://drive.google.com/file/d/1mT3QDF5SYM4C73HPYdrNDrjv_Nkyd-Hu/view" target="_blank">View</a>
+</div>
 </div>
 
-<div class="card">
-<h3>Physics Without Frontiers – General Relativity and Cosmology</h3>
-<p><strong>ICTP / Physics Without Frontiers (Physics Latam)</strong> | Jun–Sep 2025</p>
-<p>Intensive 3-month program covering General Relativity and cosmological models.</p>
-<p>Included research-level problem solving and seminars with international researchers.</p>
-<a class="button" href="https://drive.google.com/file/d/1mT3QDF5SYM4C73HPYdrNDrjv_Nkyd-Hu/view" target="_blank">View Certificate</a>
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>São Paulo School – Gravitational Physics</h3>
+<p>Strong gravity & black holes</p>
+<a class="button" href="https://drive.google.com/file/d/1WG93zWs5z5MOznQgk1-W46XlrnZXL2In/view" target="_blank">View</a>
+</div>
 </div>
 
-<div class="card">
-<h3>II São Paulo School on Gravitational Physics</h3>
-<p><strong>ICTP / Physics Without Frontiers: Physics Latam</strong> | Jul 2025</p>
-<p>Advanced topics in gravitational physics, strong gravity regimes, and black hole dynamics.</p>
-<a class="button" href="https://drive.google.com/file/d/1WG93zWs5z5MOznQgk1-W46XlrnZXL2In/view" target="_blank">View Certificate</a>
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>Bootcamp Avante – AI & Image Processing</h3>
+<a class="button" href="https://drive.google.com/file/d/1LExHBdGOWiqbWk-zE7vcjY91XkBA_6rj/view" target="_blank">C1</a>
+<a class="button" href="https://drive.google.com/file/d/1WFqdub_emZsPAEePAQn4Itt4N46QUqHT/view" target="_blank">C2</a>
+<a class="button" href="https://drive.google.com/file/d/1oyoeNtzOIdnXFr_mphRqKF1JsXOuS2Vd/view" target="_blank">C3</a>
 </div>
-
-<div class="card">
-<h3>Bootcamp Avante 2025: Image Processing with AI</h3>
-<p><strong>Yachay Tech University</strong> | Jul 2025</p>
-<p>Training in computer vision, machine learning, and astronomical data processing.</p>
-
-<div style="margin-top:10px;">
-<a class="button" href="https://drive.google.com/file/d/1LExHBdGOWiqbWk-zE7vcjY91XkBA_6rj/view" target="_blank">Certificate 1</a>
-<a class="button" href="https://drive.google.com/file/d/1WFqdub_emZsPAEePAQn4Itt4N46QUqHT/view" target="_blank">Certificate 2</a>
-<a class="button" href="https://drive.google.com/file/d/1oyoeNtzOIdnXFr_mphRqKF1JsXOuS2Vd/view" target="_blank">Certificate 3</a>
 </div>
 
 </div>
-
-<!-- ===== ADDITIONAL ===== -->
-<div class="card">
-<h3>Theoretical Physics Training Program</h3>
-<p><strong>Club de Física Teórica – Universidad Mayor de San Andrés</strong></p>
-<p>Training in Black Hole Perturbation Theory, String Theory, and Cosmology.</p>
-<p>Participation in seminars led by researchers affiliated with IAS and ICTP.</p>
-</div>
-
 </section>
+
+<script>
+const items = document.querySelectorAll('.timeline-item');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateX(0)";
+        }
+    });
+});
+
+items.forEach((item, index) => {
+    item.style.transition = `all 0.6s ease ${index * 0.1}s`;
+    observer.observe(item);
+});
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
