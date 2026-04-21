@@ -1,0 +1,78 @@
+<!-- ===================== certificates.html ===================== -->
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+<nav>
+<a href="index.html">Home</a>
+<a href="publications.html">Publications</a>
+<a href="certificates.html">Certificates</a>
+<a href="teaching.html">Teaching</a>
+</nav>
+<script>
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+});
+
+cards.forEach(card => {
+    observer.observe(card);
+});
+</script>
+<section id="publications">
+<h2>Publications & Preprints</h2>
+
+<div class="card">
+<h3>Preprint (Under Peer Review)</h3>
+<p>
+Andrade, J. C., <strong>Gallegos, J. F.</strong>, Quizhpe, D., Moscoso-Martínez, M., Naseer, T.
+</p>
+<p><em>Energy exchange between a relativistic polytrope and a Wyman IIa fluid.</em></p>
+<p>
+Preprint on <em>Research Square</em> (Springer Nature), under peer review in 
+<em>Astrophysics and Space Science</em> (2025). DOI assigned.
+</p>
+</div>
+
+<div class="card">
+<h3>Conference Presentations</h3>
+
+<p><strong>Gallegos, J. F. et al. (2026).</strong> 
+<em>Energy exchange between a relativistic polytrope and a Wyman IIa fluid.</em><br>
+Poster and mini-talk, III Symposium on Theoretical and Computational Physics, Yachay Tech University.
+</p>
+
+<p><strong>Gallegos, J. F. et al. (2025).</strong> 
+<em>Avatar Tech: Satellite-data visualization platform for climate resilience.</em><br>
+Project presentation, STEM Women Congress, Riobamba, Ecuador.
+</p>
+
+<p><strong>Gallegos, J. F. et al. (2025).</strong> 
+<em>Anisotropic study of a coupled Polytrope–Wyman IIa system.</em><br>
+Poster, XI School of Astronomy and Astrophysics, Quito Astronomical Observatory.
+</p>
+
+<p><strong>Gallegos, J. F. (2025).</strong> 
+<em>Optical analogues of black holes.</em><br>
+Review poster, National Polytechnic School.
+</p>
+
+<p><strong>Gallegos, J. F. et al. (2024).</strong> 
+<em>Simulation and implementation of a Helmholtz-coil magnetic irradiator.</em><br>
+Poster, V International Physics Congress, ESPOCH.
+</p>
+
+<p><strong>Gallegos, J. F. (2024).</strong> 
+<em>The Secrets of the Inca Cosmos: Ancestral Wisdom in Observing the Universe.</em><br>
+Talk, IV Workshop on Astronomical Observation and Astrophotography (TOAA IV).
+</p>
+
+</div>
+
+</section>

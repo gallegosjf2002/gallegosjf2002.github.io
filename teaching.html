@@ -5,8 +5,26 @@
 <body>
 <nav>
 <a href="index.html">Home</a>
+<a href="publications.html">Publications</a>
+<a href="certificates.html">Certificates</a>
 <a href="teaching.html">Teaching</a>
 </nav>
+<script>
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+});
+
+cards.forEach(card => {
+    observer.observe(card);
+});
+</script>
 <section>
 <h2>Teaching Materials</h2>
 <div class="card">
