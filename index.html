@@ -1,36 +1,20 @@
+<!-- ===================== index.html ===================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jorge Gallegos | Academic Portfolio</title>
-
-<style>
-:root{
-    --emerald:#0f9d7a;
-    --emerald-dark:#0b7a60;
-    --text:#1a1f2b;
-}
-
-body{margin:0;font-family:Segoe UI;background:white;color:var(--text);}
-
-header{background:linear-gradient(135deg,var(--emerald),var(--emerald-dark));color:white;padding:60px;text-align:center;}
-
-.profile-pic{width:150px;height:150px;border-radius:50%;object-fit:cover;border:4px solid white;margin-bottom:15px;}
-
-nav{display:flex;justify-content:center;gap:20px;padding:15px;border-bottom:1px solid #eee;}
-nav a{color:var(--emerald);text-decoration:none;font-weight:bold;}
-
-section{max-width:1000px;margin:auto;padding:40px 20px;}
-.card{background:white;padding:25px;margin-bottom:25px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.05);}
-h2{color:var(--emerald);}
-
-.button{display:inline-block;margin:5px;padding:10px 15px;background:var(--emerald);color:white;border-radius:5px;text-decoration:none;}
-
-</style>
+<title>Jorge Gallegos | Home</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="publications.html">Publications</a>
+<a href="certificates.html">Certificates</a>
+<a href="teaching.html">Teaching</a>
+</nav>
 
 <header>
     <img src="images/C_9999.jpg" class="profile-pic" alt="Profile Photo">
@@ -42,16 +26,6 @@ h2{color:var(--emerald);}
         <a class="button" href="https://github.com/gallegosjf2002" target="_blank">GitHub</a>
     </p>
 </header>
-
-<nav>
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#experience">Experience</a>
-<a href="#publications">Publications</a>
-<a href="#projects">Projects</a>
-<a href="#certifications">Certifications</a>
-<a href="#awards">Awards</a>
-</nav>
 
 <section id="about">
 <h2>About Me</h2>
@@ -100,7 +74,7 @@ h2{color:var(--emerald);}
 
 <div class="card">
 <h3>Physics and Mathematics Instructor</h3>
-<p><strong>C&L Asociados | Jan 2023 – Present | Riobamba, Ecuador</strong></p>
+<p><strong>C&L Asociados – Pedagogical Research and Training Center | Jan 2023 – Present | Riobamba, Ecuador</strong></p>
 <p>Taught Physics and Mathematics including mechanics, electromagnetism, optics, and modern physics.</p>
 <p>Designed curricula, teaching materials, and competency-based assessments.</p>
 <p>Provided personalized mentoring to improve analytical reasoning and academic performance.</p>
@@ -169,38 +143,3 @@ Talk, IV Workshop on Astronomical Observation and Astrophotography (TOAA IV).
 </div>
 
 </section>
-
-<section id="projects">
-<h2>Projects</h2>
-<div class="card">
-<h3>Avatar Tech</h3>
-<p>Satellite data platform.</p>
-<a class="button" href="https://drive.google.com/file/d/1dVZ_u94TOkqpP0eWzNCYDIO69fYla2Po/view" target="_blank">View Project</a>
-</div>
-
-<div class="card">
-<h3>Hawa Pachata</h3>
-<p>Virtual exoplanetarium.</p>
-<a class="button" href="https://drive.google.com/file/d/1sj_e-dDKTGbF0oRn0MgyvjUbMkwNAKAt/view" target="_blank">View Project</a>
-</div>
-</section>
-
-<section id="certifications">
-<h2>Certifications</h2>
-<div class="card">
-<a class="button" href="https://drive.google.com/file/d/1KHX0OuXrHPXunTu-LYBjIfdoKdLf0Zem/view">IBM Quantum</a>
-<a class="button" href="https://drive.google.com/file/d/1gyo2XnxKc6pSsETbYRrdG-eYNIQP7nb0/view">USFQ</a>
-<a class="button" href="https://drive.google.com/file/d/1mT3QDF5SYM4C73HPYdrNDrjv_Nkyd-Hu/view">GR & Cosmology</a>
-</div>
-</section>
-
-<section id="awards">
-<h2>Awards</h2>
-<div class="card">
-<a class="button" href="https://drive.google.com/file/d/1QQrTvkxQRZasNuXcXVegKIlbIjTc08VV/view">STEM Award</a>
-<a class="button" href="https://drive.google.com/file/d/1v0ro1cNM36F40YfUdTUf0hdd9Fkf0jVq/view">NASA Winner</a>
-</div>
-</section>
-
-</body>
-</html>

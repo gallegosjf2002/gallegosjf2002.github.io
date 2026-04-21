@@ -1,0 +1,10 @@
+<!-- ===================== style.css ===================== -->
+<style>
+body{font-family:Segoe UI;margin:0;background:white;color:#1a1f2b;}
+nav{display:flex;justify-content:center;gap:20px;padding:15px;border-bottom:1px solid #eee;}
+nav a{color:#0f9d7a;text-decoration:none;font-weight:bold;}
+header{background:linear-gradient(135deg,#0f9d7a,#0b7a60);color:white;text-align:center;padding:60px;}
+section{max-width:1000px;margin:auto;padding:40px 20px;}
+.card{background:white;padding:25px;margin-bottom:20px;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,0.05);} 
+.button{display:inline-block;padding:8px 12px;background:#0f9d7a;color:white;border-radius:5px;text-decoration:none;}
+</style>
