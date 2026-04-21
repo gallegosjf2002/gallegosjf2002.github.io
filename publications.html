@@ -18,10 +18,11 @@
 <a href="teaching.html">Teaching</a>
 </nav>
 
+<!-- ================= PUBLICATIONS ================= -->
 <section id="publications">
 <h2>Publications & Preprints</h2>
 
-<div class="card">
+<div class="card" style="--i:1;">
 <h3>Preprint (Under Peer Review)</h3>
 <p>
 Andrade, J. C., <strong>Gallegos, J. F.</strong>, Quizhpe, D., Moscoso-Martínez, M., Naseer, T.
@@ -42,7 +43,7 @@ Preprint on <em>Research Square</em> (Springer Nature), under peer review in
 
 <div class="timeline">
 
-<!-- ITEM -->
+<!-- ITEM 1 -->
 <div class="timeline-item">
 <div class="timeline-content">
 <h3>III Symposium on Theoretical and Computational Physics</h3>
@@ -56,7 +57,7 @@ Preprint on <em>Research Square</em> (Springer Nature), under peer review in
 </div>
 </div>
 
-<!-- ITEM -->
+<!-- ITEM 2 -->
 <div class="timeline-item">
 <div class="timeline-content">
 <h3>STEM Women Congress Ecuador</h3>
@@ -65,7 +66,7 @@ Preprint on <em>Research Square</em> (Springer Nature), under peer review in
 </div>
 </div>
 
-<!-- ITEM -->
+<!-- ITEM 3 -->
 <div class="timeline-item">
 <div class="timeline-content">
 <h3>XI School of Astronomy and Astrophysics</h3>
@@ -80,7 +81,7 @@ Preprint on <em>Research Square</em> (Springer Nature), under peer review in
 </div>
 </div>
 
-<!-- ITEM -->
+<!-- ITEM 4 -->
 <div class="timeline-item">
 <div class="timeline-content">
 <h3>YEES LIGHT 2025</h3>
@@ -94,7 +95,7 @@ Preprint on <em>Research Square</em> (Springer Nature), under peer review in
 </div>
 </div>
 
-<!-- ITEM -->
+<!-- ITEM 5 -->
 <div class="timeline-item">
 <div class="timeline-content">
 <h3>V International Physics Congress</h3>
@@ -109,7 +110,7 @@ Preprint on <em>Research Square</em> (Springer Nature), under peer review in
 </div>
 </div>
 
-<!-- ITEM -->
+<!-- ITEM 6 -->
 <div class="timeline-item">
 <div class="timeline-content">
 <h3>IV Workshop on Astronomical Observation (TOAA IV)</h3>
@@ -136,6 +137,8 @@ Preprint on <em>Research Square</em> (Springer Nature), under peer review in
 
 <!-- ================= SCRIPT ================= -->
 <script>
+
+// ===== MODAL =====
 function openModal(id){
     const modal = document.getElementById("modal");
     const frame = document.getElementById("modalFrame");
@@ -150,36 +153,53 @@ function openModal(id){
 
     frame.src = links[id];
 
-    modal.style.display = "flex";   // ✅ mostrar modal
-    setTimeout(() => {
-        modal.classList.add("show"); // animación suave
-    }, 10);
+    modal.style.display = "flex";
+    setTimeout(() => modal.classList.add("show"), 10);
 }
 
 function closeModal(){
     const modal = document.getElementById("modal");
     const frame = document.getElementById("modalFrame");
 
-    modal.classList.remove("show"); // animación salida
-    
+    modal.classList.remove("show");
+
     setTimeout(() => {
         modal.style.display = "none";
         frame.src = "";
     }, 300);
 }
 
-// cerrar haciendo click fuera
+// click fuera
 window.addEventListener("click", function(event) {
     const modal = document.getElementById("modal");
-    if (event.target === modal) {
-        closeModal();
-    }
+    if (event.target === modal) closeModal();
 });
 
-// cerrar con ESC
+// ESC
 document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-        closeModal();
-    }
+    if (event.key === "Escape") closeModal();
 });
+
+// ===== TIMELINE ANIMATION =====
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll('.timeline-item');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = "translateX(0)";
+            }
+        });
+    });
+
+    items.forEach((item, index) => {
+        item.style.transition = `all 0.6s ease ${index * 0.1}s`;
+        observer.observe(item);
+    });
+});
+
 </script>
+
+</body>
+</html>
