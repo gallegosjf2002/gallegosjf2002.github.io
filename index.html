@@ -7,26 +7,6 @@
 <title>Jorge Gallegos | Home</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="publications.html">Publications</a>
-<a href="certificates.html">Certificates</a>
-<a href="teaching.html">Teaching</a>
-</nav>
-
-<header>
-    <img src="images/C_9999.jpg" class="profile-pic" alt="Profile Photo">
-    <h1>Jorge Fabricio Gallegos Maldonado</h1>
-    <p>BSc in Physics</p>
-    <p>
-        <a class="button" href="mailto:gallegosjf2002@gmail.com">Email</a>
-        <a class="button" href="https://linkedin.com/in/jorge-gallegos-4514b1245" target="_blank">LinkedIn</a>
-        <a class="button" href="https://github.com/gallegosjf2002" target="_blank">GitHub</a>
-    </p>
-</header>
-
 <script>
 const cards = document.querySelectorAll('.card');
 
@@ -43,6 +23,36 @@ cards.forEach(card => {
     observer.observe(card);
 });
 </script>
+<body style="opacity:0; transition:opacity 0.8s ease;">
+<script>
+window.onload = () => {
+    document.body.style.opacity = 1;
+}
+</script>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="publications.html">Publications</a>
+<a href="certificates.html">Certificates</a>
+<a href="teaching.html">Teaching</a>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+
+        <img src="images/C_9999.jpg" class="profile-pic" alt="Profile Photo">
+
+        <h1>Jorge Fabricio Gallegos Maldonado</h1>
+        <p class="subtitle">BSc in Physics | Theoretical & Computational Astrophysics</p>
+
+        <div class="social-buttons">
+            <a class="button" href="mailto:gallegosjf2002@gmail.com">Email</a>
+            <a class="button" href="https://linkedin.com/in/jorge-gallegos-4514b1245" target="_blank">LinkedIn</a>
+            <a class="button" href="https://github.com/gallegosjf2002" target="_blank">GitHub</a>
+        </div>
+
+    </div>
+</header>
 
 <section id="about">
 <h2>About Me</h2>
