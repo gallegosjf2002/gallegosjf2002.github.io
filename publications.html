@@ -1,30 +1,3 @@
-<!-- ===================== certificates.html ===================== -->
-<!DOCTYPE html>
-<html>
-<head><link rel="stylesheet" href="style.css"></head>
-<script>
-const cards = document.querySelectorAll('.card');
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-});
-
-cards.forEach(card => {
-    observer.observe(card);
-});
-</script>
-<body>
-<nav>
-<a href="index.html">Home</a>
-<a href="publications.html">Publications</a>
-<a href="certificates.html">Certificates</a>
-<a href="teaching.html">Teaching</a>
-</nav>
 <section id="publications">
 <h2>Publications & Preprints</h2>
 
@@ -40,39 +13,153 @@ Preprint on <em>Research Square</em> (Springer Nature), under peer review in
 </p>
 </div>
 
-<div class="card">
-<h3>Conference Presentations</h3>
+</section>
 
-<p><strong>Gallegos, J. F. et al. (2026).</strong> 
-<em>Energy exchange between a relativistic polytrope and a Wyman IIa fluid.</em><br>
-Poster and mini-talk, III Symposium on Theoretical and Computational Physics, Yachay Tech University.
-</p>
 
-<p><strong>Gallegos, J. F. et al. (2025).</strong> 
-<em>Avatar Tech: Satellite-data visualization platform for climate resilience.</em><br>
-Project presentation, STEM Women Congress, Riobamba, Ecuador.
-</p>
+<!-- ================= CONFERENCES ================= -->
+<section id="conferences">
+<h2>Conferences & Seminars</h2>
 
-<p><strong>Gallegos, J. F. et al. (2025).</strong> 
-<em>Anisotropic study of a coupled Polytrope–Wyman IIa system.</em><br>
-Poster, XI School of Astronomy and Astrophysics, Quito Astronomical Observatory.
-</p>
+<div class="timeline">
 
-<p><strong>Gallegos, J. F. (2025).</strong> 
-<em>Optical analogues of black holes.</em><br>
-Review poster, National Polytechnic School.
-</p>
+<!-- ITEM -->
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>III Symposium on Theoretical and Computational Physics</h3>
+<p><strong>Yachay Tech University</strong> | Jan 2026</p>
+<p>Poster & mini-talk: <em>Energy exchange between a relativistic polytrope and a Wyman IIa fluid</em>.</p>
 
-<p><strong>Gallegos, J. F. et al. (2024).</strong> 
-<em>Simulation and implementation of a Helmholtz-coil magnetic irradiator.</em><br>
-Poster, V International Physics Congress, ESPOCH.
-</p>
-
-<p><strong>Gallegos, J. F. (2024).</strong> 
-<em>The Secrets of the Inca Cosmos: Ancestral Wisdom in Observing the Universe.</em><br>
-Talk, IV Workshop on Astronomical Observation and Astrophotography (TOAA IV).
-</p>
-
+<div class="actions">
+<button onclick="openModal('pdf1')">Preview</button>
+<a href="https://drive.google.com/file/d/1dVZ_u94TOkqpP0eWzNCYDlO69fYIa2Po/view" target="_blank">Open PDF</a>
+</div>
+</div>
 </div>
 
+<!-- ITEM -->
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>STEM Women Congress Ecuador</h3>
+<p><strong>Riobamba, Ecuador</strong> | Oct 2025</p>
+<p><em>Avatar Tech</em> – Satellite-data visualization platform.</p>
+</div>
+</div>
+
+<!-- ITEM -->
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>XI School of Astronomy and Astrophysics</h3>
+<p><strong>Quito Astronomical Observatory</strong> | Jul 2025</p>
+<p>Poster: <em>Anisotropic study of a coupled Polytrope–Wyman IIa system</em>.</p>
+
+<div class="actions">
+<button onclick="openModal('pdf2')">Preview</button>
+<a href="https://drive.google.com/file/d/1680QigspCMG7O1ipbv_f8-uoiFC2q5Mk/view" target="_blank">PDF 1</a>
+<a href="https://drive.google.com/file/d/1g32oLPzlcPx-7-vkCb5zHZMjo90gx-9/view" target="_blank">PDF 2</a>
+</div>
+</div>
+</div>
+
+<!-- ITEM -->
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>YEES LIGHT 2025</h3>
+<p><strong>Escuela Politécnica Nacional</strong> | 2025</p>
+<p>Poster: <em>Optical analogues of black holes</em>.</p>
+
+<div class="actions">
+<button onclick="openModal('pdf3')">Preview</button>
+<a href="https://drive.google.com/file/d/1G1goiGLK9vbB_tfBnKcLup104Swbwsio/view" target="_blank">PDF</a>
+</div>
+</div>
+</div>
+
+<!-- ITEM -->
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>V International Physics Congress</h3>
+<p><strong>ESPOCH</strong> | Oct 2024</p>
+<p>Simulation and implementation of Helmholtz-coil magnetic irradiator.</p>
+
+<div class="actions">
+<button onclick="openModal('pdf4')">Preview</button>
+<a href="https://drive.google.com/file/d/1ebfroOuVnsfHQvXC4WLkoN_qVo7v6Ei/view" target="_blank">PDF 1</a>
+<a href="https://drive.google.com/file/d/1Bvw0V0w5DDPujIAjF0uV-lFlPYy5afau/view" target="_blank">PDF 2</a>
+</div>
+</div>
+</div>
+
+<!-- ITEM -->
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>IV Workshop on Astronomical Observation (TOAA IV)</h3>
+<p><strong>San Miguel, Ecuador</strong> | 2024</p>
+<p>Invited talk: <em>The Secrets of the Inca Cosmos</em>.</p>
+
+<div class="actions">
+<button onclick="openModal('pdf5')">Preview</button>
+<a href="https://drive.google.com/file/d/1UGHEpQmlfDR-q4IRu7WhB05ONN25SArs/view" target="_blank">PDF</a>
+</div>
+</div>
+</div>
+
+</div>
 </section>
+
+
+<!-- ================= MODAL ================= -->
+<div id="modal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<iframe id="modalFrame"></iframe>
+</div>
+
+
+<!-- ================= SCRIPT ================= -->
+<script>
+function openModal(id){
+    const modal = document.getElementById("modal");
+    const frame = document.getElementById("modalFrame");
+
+    const links = {
+        pdf1: "https://drive.google.com/file/d/1dVZ_u94TOkqpP0eWzNCYDlO69fYIa2Po/preview",
+        pdf2: "https://drive.google.com/file/d/1680QigspCMG7O1ipbv_f8-uoiFC2q5Mk/preview",
+        pdf3: "https://drive.google.com/file/d/1G1goiGLK9vbB_tfBnKcLup104Swbwsio/preview",
+        pdf4: "https://drive.google.com/file/d/1ebfroOuVnsfHQvXC4WLkoN_qVo7v6Ei/preview",
+        pdf5: "https://drive.google.com/file/d/1UGHEpQmlfDR-q4IRu7WhB05ONN25SArs/preview"
+    };
+
+    frame.src = links[id];
+
+    modal.style.display = "flex";   // ✅ mostrar modal
+    setTimeout(() => {
+        modal.classList.add("show"); // animación suave
+    }, 10);
+}
+
+function closeModal(){
+    const modal = document.getElementById("modal");
+    const frame = document.getElementById("modalFrame");
+
+    modal.classList.remove("show"); // animación salida
+    
+    setTimeout(() => {
+        modal.style.display = "none";
+        frame.src = "";
+    }, 300);
+}
+
+// cerrar haciendo click fuera
+window.addEventListener("click", function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
+// cerrar con ESC
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeModal();
+    }
+});
+</script>
