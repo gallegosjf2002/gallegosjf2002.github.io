@@ -1,120 +1,212 @@
-<!-- ===================== index.html ===================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jorge Gallegos | Home</title>
+<title>Jorge Gallegos | Theoretical Astrophysics</title>
 <link rel="stylesheet" href="style.css">
-</head>
-<script>
-const cards = document.querySelectorAll('.card');
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-});
+<!-- Fuente más premium -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-cards.forEach(card => {
-    observer.observe(card);
-});
-</script>
-<body style="opacity:0; transition:opacity 0.8s ease;">
-<script>
-window.onload = () => {
-    document.body.style.opacity = 1;
+<style>
+body{
+    font-family: 'Inter', sans-serif;
 }
-</script>
+
+/* HERO UPGRADE */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* fondo animado sutil */
+.hero::before {
+    content:"";
+    position:absolute;
+    width:200%;
+    height:200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: moveBg 20s linear infinite;
+}
+
+@keyframes moveBg {
+    from { transform: translate(0,0); }
+    to { transform: translate(-200px,-200px); }
+}
+
+/* glass effect */
+.hero-content{
+    backdrop-filter: blur(10px);
+}
+
+/* títulos pro */
+h2{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* grid moderno */
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+}
+
+/* highlight */
+.highlight{
+    border-left:4px solid #0f9d7a;
+}
+
+/* fade on load */
+.fade{
+    opacity:0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s forwards;
+}
+</style>
+
+</head>
+
+<body>
 
 <nav>
 <a href="index.html">Home</a>
 <a href="publications.html">Publications</a>
 <a href="certificates.html">Certificates</a>
 <a href="teaching.html">Teaching</a>
+<a href="about_me.html">About Me</a>
 </nav>
 
+<!-- HERO -->
 <header class="hero">
-    <div class="hero-content">
+<div class="hero-content fade">
 
-        <img src="images/C_9999.jpg" class="profile-pic" alt="Profile Photo">
+<img src="images/C_9999.jpg" class="profile-pic">
 
-        <h1>Jorge Fabricio Gallegos Maldonado</h1>
-        <p class="subtitle">BSc in Physics</p>
+<h1>Jorge Gallegos</h1>
 
-        <div class="social-buttons">
-            <a class="button" href="mailto:gallegosjf2002@gmail.com">Email</a>
-            <a class="button" href="https://linkedin.com/in/jorge-gallegos-4514b1245" target="_blank">LinkedIn</a>
-            <a class="button" href="https://github.com/gallegosjf2002" target="_blank">GitHub</a>
-        </div>
+<p class="subtitle">
+Theoretical & Computational Astrophysics
+</p>
 
-    </div>
+<p style="max-width:650px; margin:auto; line-height:1.6;">
+I study relativistic fluids, compact objects, and gravitational systems through analytical modeling and high-performance computation. My work focuses on bridging mathematical physics with astrophysical observables.
+</p>
+
+<p style="margin-top:10px; opacity:0.85;">
+Aspiring PhD researcher in theoretical astrophysics.
+</p>
+
+<div class="social-buttons">
+<a class="button" href="mailto:gallegosjf2002@gmail.com">Email</a>
+<a class="button" href="https://linkedin.com/in/jorge-gallegos-4514b1245" target="_blank">LinkedIn</a>
+<a class="button" href="https://github.com/gallegosjf2002" target="_blank">GitHub</a>
+</div>
+
+</div>
 </header>
 
-<section id="about">
-<h2>About Me</h2>
-<div class="card">
-<p>Prospective theoretical and computational astrophysicist with strong training in General Relativity, relativistic fluid dynamics, and numerical modeling of compact objects. Research experience includes gravitational decoupling, anisotropic stellar configurations, and stability analyses of relativistic fluids. Co-author of a research preprint, currently under peer review in Springer Nature. Complementary experience in finite-element magnetic field simulations and GPU-accelerated scientific computing. Seeking advanced graduate training toward a Ph.D. in theoretical and computational astrophysics.</p>
+<!-- IMPACT -->
+<section>
+<h2>Research Focus</h2>
+
+<div class="grid">
+
+<div class="card highlight fade" style="--i:1">
+<h3>Relativistic Astrophysics</h3>
+<p>Modeling compact objects using Einstein field equations and anisotropic fluid distributions.</p>
+</div>
+
+<div class="card fade" style="--i:2">
+<h3>Gravitational Decoupling</h3>
+<p>Extended MGD methods applied to polytropes and exotic matter configurations.</p>
+</div>
+
+<div class="card fade" style="--i:3">
+<h3>Computational Physics</h3>
+<p>Numerical simulations, GPU acceleration, and scientific computing for complex systems.</p>
+</div>
+
 </div>
 </section>
 
-<section id="education">
-<h2>Education</h2>
-<div class="card">
-<h3>BSc in Physics – ESPOCH</h3>
-<p>Final grade: 9.03/10</p>
-<p><strong>Thesis:</strong> Relativistic Energy Exchange between a Polytrope and a Wyman IIa Fluid</p>
-<p><strong>Relevant Coursework:</strong> General Relativity, Quantum Mechanics, Electrodynamics, Computational Physics</p>
-<p><strong>Core Training:</strong> Tensor calculus and differential geometry; advanced ODEs/PDEs; variational methods; mathematical modeling</p>
+<!-- PROJECTS -->
+<section>
+<h2>Selected Work</h2>
+
+<div class="grid">
+
+<div class="card fade" style="--i:1">
+<h3>Relativistic Polytrope Model</h3>
+<p>Energy exchange mechanisms in coupled relativistic systems (under peer review).</p>
+</div>
+
+<div class="card fade" style="--i:2">
+<h3>Magnetic Field Simulation</h3>
+<p>3D modeling of Helmholtz and crossed-coil systems with high precision.</p>
+</div>
+
+<div class="card fade" style="--i:3">
+<h3>Avatar Tech</h3>
+<p>Satellite-data visualization platform for climate resilience and Earth observation.</p>
+</div>
+
 </div>
 </section>
 
-<section id="experience">
-<h2>Experience</h2>
+<!-- METRICS / CREDIBILITY -->
+<section>
+<h2>Academic Highlights</h2>
 
-<div class="card">
-<h3>Physics and Mathematics Instructor</h3>
-<p><strong>C&L Asociados – Pedagogical Research and Training Center | Jan 2023 – Present | Riobamba, Ecuador</strong></p>
-<p>Taught Physics and Mathematics including mechanics, electromagnetism, optics, and modern physics.</p>
-<p>Designed curricula, teaching materials, and competency-based assessments.</p>
-<p>Provided personalized mentoring to improve analytical reasoning and academic performance.</p>
-<p>Prepared students for university entrance exams and academic leveling.</p>
+<div class="grid">
+
+<div class="card fade">
+<h3>1</h3>
+<p>Research Preprint (Springer Nature)</p>
 </div>
 
-<div class="card">
-<h3>Undergraduate Researcher – Relativistic Compact Objects</h3>
-<p><strong>ESPOCH | Jul 2024 – Mar 2025 | Riobamba, Ecuador</strong></p>
-<p>Solved coupled nonlinear Einstein field equations for anisotropic relativistic fluids using numerical and semi-analytical methods.</p>
-<p>Performed stability, causality, and physical acceptability analyses of compact stellar models.</p>
-<p>Identified violations of the Strong Energy Condition below a critical polytropic constant (K &lt; 0.43), constraining neutron-star interior models.</p>
-<p>Developed reproducible scientific workflows using MATLAB and Mathematica.</p>
+<div class="card fade">
+<h3>5+</h3>
+<p>Conference Presentations</p>
 </div>
 
-<div class="card">
-<h3>Research Assistant – Magnetic Field Simulation & Instrumentation</h3>
-<p><strong>GIDAC | Apr 2024 – Jan 2025 | Riobamba, Ecuador</strong></p>
-<p>Designed and implemented finite-element simulations of Helmholtz and crossed-coil magnetic systems.</p>
-<p>Developed GPU-accelerated routines for 3D magnetic field evaluation and visualization.</p>
-<p>Contributed to the construction, calibration, and validation of a high-precision magnetic irradiator.</p>
+<div class="card fade">
+<h3>3+</h3>
+<p>Research Projects</p>
 </div>
 
-<div class="card">
-<h3>Student Researcher – Magnetic Irradiation Systems</h3>
-<p><strong>GIDAC | Nov 2023 – Dec 2023 | Riobamba, Ecuador</strong></p>
-<p>Developed analytical and numerical models for crossed-coil magnetic configurations.</p>
-<p>Performed quantitative comparisons between simulations and experimental measurements.</p>
 </div>
-
-<div class="card">
-<h3>Laboratory Teaching Assistant – Optics & Modern Physics</h3>
-<p><strong>ESPOCH | Sep 2023 – Mar 2024 | Riobamba, Ecuador</strong></p>
-<p>Assisted in laboratory sessions, including experimental setup, alignment, and data acquisition.</p>
-<p>Applied laboratory safety protocols and best practices.</p>
-<p>Guided students in data analysis, scientific reporting, and LaTeX documentation.</p>
-<p>Supported instruction in experimental methods and uncertainty analysis.</p>
-</div>
-
 </section>
+
+<!-- CTA -->
+<section style="text-align:center;">
+<h2>Explore My Research</h2>
+
+<div class="social-buttons">
+<a class="button" href="publications.html">Publications</a>
+<a class="button" href="cv.html">Full CV</a>
+</div>
+</section>
+
+<!-- SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll('.fade');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = "translateY(0)";
+            }
+        });
+    });
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>
