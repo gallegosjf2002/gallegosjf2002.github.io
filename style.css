@@ -633,3 +633,51 @@ section{
 .event-links a:hover::after {
     width: 100%;
 }
+
+/* ===== EXPERIENCE ===== */
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.exp-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.exp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.exp-header span {
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+.exp-place {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 8px 0 12px;
+}
+
+.exp-card ul {
+    padding-left: 18px;
+}
+
+.exp-card li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
