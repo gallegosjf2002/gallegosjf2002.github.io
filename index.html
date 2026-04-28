@@ -21,18 +21,22 @@
 </nav>
 
 <!-- HERO LIMPIO -->
-<header class="hero-pro">
-
 <div class="hero-container">
 
-    <!-- LEFT: IMAGE -->
+    <!-- LEFT: IMAGE CAROUSEL -->
     <div class="hero-image">
-        <img src="images/portada/IMG-20241013-WA0027.jpg">
+
+        <img src="images/portada/IMG-20241013-WA0027.jpg" class="slide active">
+        <img src="images/portada/IMG-20241013-WA0028.jpg" class="slide">
+        <img src="images/portada/IMG-20241013-WA0029.jpg" class="slide">
+        <img src="images/portada/IMG-20241013-WA0030.jpg" class="slide">
+        <img src="images/portada/IMG-20241013-WA0031.jpg" class="slide">
+        <img src="images/portada/IMG-20241013-WA0032.jpg" class="slide">
+
     </div>
 
     <!-- RIGHT: INFO -->
     <div class="hero-info">
-
         <img src="images/C_9999.jpg" class="profile-pic">
 
         <h1>Jorge Gallegos</h1>
@@ -56,12 +60,9 @@
             <a class="button" href="#">LinkedIn</a>
             <a class="button" href="#">GitHub</a>
         </div>
-
     </div>
 
 </div>
-
-</header>
 
 <!-- RESEARCH STRIP (horizontal + animado) -->
 <section>
@@ -167,6 +168,22 @@ const observer = new IntersectionObserver(entries => {
 });
 
 cards.forEach(c => observer.observe(c));
+</script>
+
+<script>
+const slides = document.querySelectorAll(".slide");
+let current = 0;
+
+function changeSlide(){
+    slides[current].classList.remove("active");
+
+    current = (current + 1) % slides.length;
+
+    slides[current].classList.add("active");
+}
+
+// cambia cada 4 segundos
+setInterval(changeSlide, 4000);
 </script>
 
 </body>
