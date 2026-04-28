@@ -3,41 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jorge Gallegos | Physicsist</title>
+<title>Jorge Gallegos | Physicist</title>
+
 <link rel="stylesheet" href="style.css">
-
-<!-- Fuente más premium -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
 <a href="index.html">Home</a>
+<a href="cv.html">CV</a>
 <a href="publications.html">Publications</a>
-<a href="certificates.html">Certificates</a>
 <a href="teaching.html">Teaching</a>
-<a href="about_me.html">About Me</a>
+<a href="certificates.html">Certificates</a>
 </nav>
 
-<!-- HERO -->
+<!-- HERO LIMPIO -->
 <header class="hero">
 
-<!-- BACKGROUND SLIDER -->
 <div class="hero-slider">
     <img src="images/portada/IMG-20241013-WA0027.jpg">
     <img src="images/portada/IMG-20241013-WA0028.jpg">
     <img src="images/portada/IMG-20241013-WA0029.jpg">
-    <img src="images/portada/IMG-20241013-WA0030.jpg">
-    <img src="images/portada/IMG-20241013-WA0031.jpg">
-    <img src="images/portada/IMG-20241013-WA0032.jpg">
 </div>
 
-<!-- OVERLAY PROFESIONAL -->
 <div class="hero-overlay"></div>
 
-<!-- CONTENT -->
 <div class="hero-content">
 
 <img src="images/C_9999.jpg" class="profile-pic">
@@ -45,16 +38,16 @@
 <h1>Jorge Gallegos</h1>
 
 <p class="subtitle">
-Theoretical & Computational Astrophysics
+Physicist — Theoretical & Computational Physics
 </p>
 
 <p class="hero-description">
-Exploring relativistic fluids, compact objects, and gravitational systems through analytical modeling and high-performance computation.
+Focused on General Relativity, relativistic fluids, and numerical modeling of physical systems.
 </p>
 
 <div class="hero-badges">
 <span>General Relativity</span>
-<span>Compact Objects</span>
+<span>Relativistic Fluids</span>
 <span>Scientific Computing</span>
 </div>
 
@@ -67,81 +60,81 @@ Exploring relativistic fluids, compact objects, and gravitational systems throug
 </div>
 </header>
 
-<!-- IMPACT -->
+<!-- RESEARCH STRIP (horizontal + animado) -->
 <section>
 <h2>Research Focus</h2>
 
-<div class="grid">
+<div class="horizontal-scroll">
 
-<div class="card highlight fade" style="--i:1">
-<h3>Relativistic Astrophysics</h3>
-<p>Modeling compact objects using Einstein field equations and anisotropic fluid distributions.</p>
+<div class="mini-card left">
+<h3>Relativistic Systems</h3>
+<p>Einstein equations applied to compact objects.</p>
 </div>
 
-<div class="card fade" style="--i:2">
+<div class="mini-card right">
 <h3>Gravitational Decoupling</h3>
-<p>Extended MGD methods applied to polytropes and exotic matter configurations.</p>
+<p>MGD approach for anisotropic fluids.</p>
 </div>
 
-<div class="card fade" style="--i:3">
+<div class="mini-card left">
 <h3>Computational Physics</h3>
-<p>Numerical simulations, GPU acceleration, and scientific computing for complex systems.</p>
+<p>Numerical modeling and simulation.</p>
 </div>
 
 </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- WORK STRIP -->
 <section>
 <h2>Selected Work</h2>
 
-<div class="grid">
+<div class="horizontal-scroll">
 
-<div class="card fade" style="--i:1">
-<h3>Relativistic Polytrope Model</h3>
-<p>Energy exchange mechanisms in coupled relativistic systems (under peer review).</p>
+<div class="mini-card right">
+<h3>Relativistic Polytrope</h3>
+<p>Energy exchange in coupled systems.</p>
 </div>
 
-<div class="card fade" style="--i:2">
-<h3>Magnetic Field Simulation</h3>
-<p>3D modeling of Helmholtz and crossed-coil systems with high precision.</p>
+<div class="mini-card left">
+<h3>Magnetic Simulation</h3>
+<p>Helmholtz coil modeling.</p>
 </div>
 
-<div class="card fade" style="--i:3">
+<div class="mini-card right">
 <h3>Avatar Tech</h3>
-<p>Satellite-data visualization platform for climate resilience and Earth observation.</p>
+<p>Satellite data visualization.</p>
 </div>
 
 </div>
 </section>
 
-<!-- METRICS / CREDIBILITY -->
+<!-- METRICS -->
 <section>
 <h2>Academic Highlights</h2>
 
-<div class="grid">
+<div class="metrics">
 
-<div class="card fade">
+<div class="metric-card fade">
 <h3>1</h3>
-<p>Research Preprint (Springer Nature)</p>
+<p>Research Preprint</p>
 </div>
 
-<div class="card fade">
+<div class="metric-card fade">
 <h3>5+</h3>
-<p>Conference Presentations</p>
+<p>Conferences</p>
 </div>
 
-<div class="card fade">
+<div class="metric-card fade">
 <h3>3+</h3>
-<p>Research Projects</p>
+<p>Projects</p>
 </div>
 
 </div>
 </section>
 
 <!-- CTA -->
-<section style="text-align:center;">
-<h2>Explore My Research</h2>
+<section class="cta">
+<h2>Explore My Work</h2>
 
 <div class="social-buttons">
 <a class="button" href="publications.html">Publications</a>
@@ -152,13 +145,13 @@ Exploring relativistic fluids, compact objects, and gravitational systems throug
 <!-- SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll('.fade');
+
+    const elements = document.querySelectorAll('.left, .right, .fade');
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if(entry.isIntersecting){
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = "translateY(0)";
+                entry.target.classList.add("show");
             }
         });
     });
