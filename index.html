@@ -21,67 +21,62 @@
 </nav>
 
 <!-- HERO LIMPIO -->
-<header class="hero">
+<header class="hero-pro">
 
-<div class="hero-slider">
-    <img src="images/portada/IMG-20241013-WA0027.jpg">
-    <img src="images/portada/IMG-20241013-WA0028.jpg">
-    <img src="images/portada/IMG-20241013-WA0029.jpg">
+<div class="hero-container">
+
+    <!-- LEFT: IMAGE -->
+    <div class="hero-image">
+        <img src="images/portada/IMG-20241013-WA0027.jpg">
+    </div>
+
+    <!-- RIGHT: INFO -->
+    <div class="hero-info">
+
+        <img src="images/C_9999.jpg" class="profile-pic">
+
+        <h1>Jorge Gallegos</h1>
+
+        <p class="subtitle">
+        Physicist | Theoretical & Computational Physics
+        </p>
+
+        <p class="hero-description">
+        Focused on General Relativity, relativistic fluids, and numerical modeling of physical systems.
+        </p>
+
+        <div class="hero-badges">
+            <span>General Relativity</span>
+            <span>Relativistic Fluids</span>
+            <span>Scientific Computing</span>
+        </div>
+
+        <div class="social-buttons">
+            <a class="button" href="#">Email</a>
+            <a class="button" href="#">LinkedIn</a>
+            <a class="button" href="#">GitHub</a>
+        </div>
+
+    </div>
+
 </div>
 
-<div class="hero-overlay"></div>
-
-<div class="hero-content">
-
-<img src="images/C_9999.jpg" class="profile-pic">
-
-<h1>Jorge Gallegos</h1>
-
-<p class="subtitle">
-Physicist — Theoretical & Computational Physics
-</p>
-
-<p class="hero-description">
-Focused on General Relativity, relativistic fluids, and numerical modeling of physical systems.
-</p>
-
-<div class="hero-badges">
-<span>General Relativity</span>
-<span>Relativistic Fluids</span>
-<span>Scientific Computing</span>
-</div>
-
-<div class="social-buttons">
-<a class="button" href="mailto:gallegosjf2002@gmail.com">Email</a>
-<a class="button" href="https://linkedin.com/in/jorge-gallegos-4514b1245" target="_blank">LinkedIn</a>
-<a class="button" href="https://github.com/gallegosjf2002" target="_blank">GitHub</a>
-</div>
-
-</div>
 </header>
 
 <!-- RESEARCH STRIP (horizontal + animado) -->
 <section>
+
 <h2>Research Focus</h2>
 
 <div class="horizontal-scroll">
 
-<div class="mini-card left">
-<h3>Relativistic Systems</h3>
-<p>Einstein equations applied to compact objects.</p>
-</div>
-
-<div class="mini-card right">
-<h3>Gravitational Decoupling</h3>
-<p>MGD approach for anisotropic fluids.</p>
-</div>
-
-<div class="mini-card left">
-<h3>Computational Physics</h3>
-<p>Numerical modeling and simulation.</p>
-</div>
+<div class="mini-card left">Relativistic Systems</div>
+<div class="mini-card">Gravitational Decoupling</div>
+<div class="mini-card left">Computational Physics</div>
+<div class="mini-card">Numerical Modeling</div>
 
 </div>
+
 </section>
 
 <!-- WORK STRIP -->
@@ -158,6 +153,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     elements.forEach(el => observer.observe(el));
 });
+</script>
+
+<script>
+const cards = document.querySelectorAll(".mini-card");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+cards.forEach(c => observer.observe(c));
 </script>
 
 </body>
