@@ -3,171 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jorge Gallegos | Physicist</title>
+
+<title>Jorge Gallegos | Physics</title>
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 <!-- NAV -->
 <nav>
-<a href="index.html">Home</a>
+<a href="#">Home</a>
 <a href="cv.html">CV</a>
-<a href="publications.html">Publications</a>
-<a href="teaching.html">Teaching</a>
-<a href="certificates.html">Certificates</a>
+<a href="#">Publications</a>
+<a href="#">Teaching</a>
 </nav>
 
-<!-- HERO LIMPIO -->
-<header class="hero-pro">
+<!-- HERO -->
+<header class="hero-mit">
 
-<div class="hero-container">
+<div class="hero-left">
+    <h1>Jorge Gallegos</h1>
 
-    <!-- LEFT: IMAGE -->
-    <div class="hero-image">
-        <img src="images/portada/IMG-20241013-WA0027.jpg">
+    <p class="subtitle">
+    Physicist | Theoretical & Computational Physics
+    </p>
+
+    <p class="hero-text">
+    I work on relativistic fluid systems and compact objects, combining analytical modeling and numerical methods to study fundamental gravitational phenomena.
+    </p>
+
+    <div class="hero-actions">
+        <a class="button" href="#">Publications</a>
+        <a class="button ghost" href="#">Download CV</a>
     </div>
+</div>
 
-    <!-- RIGHT: INFO -->
-    <div class="hero-info">
-
-        <img src="images/C_9999.jpg" class="profile-pic">
-
-        <h1>Jorge Gallegos</h1>
-
-        <p class="subtitle">
-        Physicist | Theoretical & Computational Physics
-        </p>
-
-        <p class="hero-description">
-        Focused on General Relativity, relativistic fluids, and numerical modeling of physical systems.
-        </p>
-
-        <div class="hero-badges">
-            <span>General Relativity</span>
-            <span>Relativistic Fluids</span>
-            <span>Scientific Computing</span>
-        </div>
-
-        <div class="social-buttons">
-            <a class="button" href="#">Email</a>
-            <a class="button" href="#">LinkedIn</a>
-            <a class="button" href="#">GitHub</a>
-        </div>
-
-    </div>
-
+<div class="hero-right">
+    <img src="images/C_9999.jpg">
 </div>
 
 </header>
 
-<!-- RESEARCH STRIP (horizontal + animado) -->
-<section>
+<!-- RESEARCH STATEMENT -->
+<section class="section paper">
 
-<h2>Research Focus</h2>
+<h2>Research Statement</h2>
 
-<div class="horizontal-scroll">
+<p>
+My research focuses on relativistic systems governed by Einstein’s field equations. I am particularly interested in anisotropic fluids, gravitational decoupling methods, and stability conditions in compact objects.
+</p>
 
-<div class="mini-card left">Relativistic Systems</div>
-<div class="mini-card">Gravitational Decoupling</div>
-<div class="mini-card left">Computational Physics</div>
-<div class="mini-card">Numerical Modeling</div>
+<p>
+I aim to bridge mathematical physics with astrophysical observables through computational modeling and numerical simulations.
+</p>
+
+</section>
+
+<!-- CURRENT WORK -->
+<section class="section split">
+
+<div class="split-left">
+<h2>Current Work</h2>
+</div>
+
+<div class="split-right">
+
+<div class="paper-card">
+<h3>Relativistic Polytrope System</h3>
+<p>Energy exchange in coupled relativistic fluids using Wyman IIa models.</p>
+</div>
+
+<div class="paper-card">
+<h3>Magnetic Field Simulation</h3>
+<p>Finite-element modeling of Helmholtz and crossed-coil systems.</p>
+</div>
 
 </div>
 
 </section>
 
-<!-- WORK STRIP -->
-<section>
-<h2>Selected Work</h2>
+<!-- PROJECTS -->
+<section class="section">
 
-<div class="horizontal-scroll">
+<h2>Selected Projects</h2>
 
-<div class="mini-card right">
-<h3>Relativistic Polytrope</h3>
-<p>Energy exchange in coupled systems.</p>
+<div class="projects">
+
+<div class="project">
+<h3>Gravitational Decoupling</h3>
+<p>MGD applied to anisotropic stellar configurations.</p>
 </div>
 
-<div class="mini-card left">
-<h3>Magnetic Simulation</h3>
-<p>Helmholtz coil modeling.</p>
+<div class="project">
+<h3>Computational Modeling</h3>
+<p>GPU-based numerical simulations of physical systems.</p>
 </div>
 
-<div class="mini-card right">
+<div class="project">
 <h3>Avatar Tech</h3>
-<p>Satellite data visualization.</p>
+<p>Satellite data visualization platform.</p>
 </div>
 
 </div>
+
 </section>
 
-<!-- METRICS -->
-<section>
-<h2>Academic Highlights</h2>
+<!-- TIMELINE -->
+<section class="section timeline-pro">
 
-<div class="metrics">
+<h2>Academic Timeline</h2>
 
-<div class="metric-card fade">
-<h3>1</h3>
-<p>Research Preprint</p>
+<div class="timeline-line"></div>
+
+<div class="timeline-item left">
+<h3>2025</h3>
+<p>Research preprint submitted (Springer Nature)</p>
 </div>
 
-<div class="metric-card fade">
-<h3>5+</h3>
-<p>Conferences</p>
+<div class="timeline-item right">
+<h3>2024</h3>
+<p>Magnetic irradiator project (GIDAC)</p>
 </div>
 
-<div class="metric-card fade">
-<h3>3+</h3>
-<p>Projects</p>
+<div class="timeline-item left">
+<h3>2023</h3>
+<p>Teaching assistant – Physics labs</p>
 </div>
 
-</div>
 </section>
 
 <!-- CTA -->
-<section class="cta">
+<section class="section center">
+
 <h2>Explore My Work</h2>
 
-<div class="social-buttons">
-<a class="button" href="publications.html">Publications</a>
-<a class="button" href="cv.html">Full CV</a>
-</div>
-</section>
-
-<!-- SCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-    const elements = document.querySelectorAll('.left, .right, .fade');
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add("show");
-            }
-        });
-    });
-
-    elements.forEach(el => observer.observe(el));
-});
-</script>
+<a class="button" href="#">View Publications</a>
 
 <script>
-const cards = document.querySelectorAll(".mini-card");
+const items = document.querySelectorAll(".project, .paper-card, .timeline-item");
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
         if(entry.isIntersecting){
-            entry.target.classList.add("show");
+            entry.target.style.opacity=1;
+            entry.target.style.transform="translateY(0)";
         }
     });
 });
 
-cards.forEach(c => observer.observe(c));
+items.forEach(el=>{
+    el.style.opacity=0;
+    el.style.transform="translateY(40px)";
+    el.style.transition="0.6s";
+    observer.observe(el);
+});
 </script>
+
+</section>
 
 </body>
 </html>
