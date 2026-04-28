@@ -5,13 +5,121 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Research | Jorge Gallegos</title>
+
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- ===== PAGE-SPECIFIC STYLES ===== -->
+<style>
+
+/* ===== PAPER CARD ===== */
+.card.highlight {
+    border-left: 5px solid #0f9d7a;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.card.highlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+.publication-meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.project-links {
+    margin-top: 15px;
+}
+
+.project-links a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #0f9d7a;
+    font-weight: 600;
+}
+
+/* ===== HORIZONTAL CARDS ===== */
+.horizontal-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.mini-card {
+    min-width: 280px;
+    scroll-snap-align: start;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: 0.4s;
+}
+
+.mini-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* ===== TIMELINE ANIMATION ===== */
+.timeline-item {
+    opacity: 0;
+    transform: translateX(60px);
+}
+
+.timeline-item:nth-child(even) {
+    transform: translateX(-60px);
+}
+
+.timeline-item.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ===== SPACING ===== */
+section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: #0f9d7a;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- ===== NAV ===== -->
 <nav>
 <a href="index.html">Home</a>
 <a href="publications.html">Research</a>
@@ -19,22 +127,18 @@
 <a href="teaching.html">Teaching</a>
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- ===== HERO ===== -->
 <header class="sub-hero">
 <div class="sub-hero-content">
-
 <h1>Research & Publications</h1>
-
 <p>
 My research focuses on relativistic fluid systems, gravitational decoupling, and numerical modeling of compact objects.
 I aim to connect rigorous mathematical physics with physically observable astrophysical phenomena.
 </p>
-
 </div>
 </header>
 
-
-<!-- ================= RESEARCH OUTPUT ================= -->
+<!-- ===== PUBLICATION ===== -->
 <section>
 <h2>Publications & Preprints</h2>
 
@@ -47,9 +151,7 @@ Andrade, J. C., <strong>Gallegos, J. F.</strong>, Quizhpe, D., Moscoso-Martínez
 </p>
 
 <p>
-<em>
-Energy exchange between a relativistic polytrope and a Wyman IIa fluid
-</em>
+<em>Energy exchange between a relativistic polytrope and a Wyman IIa fluid</em>
 </p>
 
 <p>
@@ -63,31 +165,30 @@ Research Square (Springer Nature) — under peer review in
 </p>
 
 <div class="project-links">
-<a href="#" target="_blank">DOI</a>
+<a href="#">DOI</a>
 <a href="https://www.researchsquare.com/" target="_blank">Preprint</a>
 </div>
 
 </div>
 </section>
 
-
-<!-- ================= RESEARCH THEMES ================= -->
+<!-- ===== THEMES ===== -->
 <section>
 <h2>Research Themes</h2>
 
 <div class="horizontal-scroll">
 
-<div class="mini-card right">
+<div class="mini-card">
 <h3>General Relativity</h3>
 <p>Nonlinear Einstein field equations and exact solutions for compact objects.</p>
 </div>
 
-<div class="mini-card left">
+<div class="mini-card">
 <h3>Relativistic Fluids</h3>
 <p>Anisotropic matter distributions, stability analysis, and energy conditions.</p>
 </div>
 
-<div class="mini-card right">
+<div class="mini-card">
 <h3>Computational Physics</h3>
 <p>Numerical methods, GPU acceleration, and scientific modeling workflows.</p>
 </div>
@@ -95,8 +196,7 @@ Research Square (Springer Nature) — under peer review in
 </div>
 </section>
 
-
-<!-- ================= TIMELINE ================= -->
+<!-- ===== TIMELINE ===== -->
 <section>
 <h2>Conferences & Scientific Communication</h2>
 
@@ -106,14 +206,7 @@ Research Square (Springer Nature) — under peer review in
 <div class="timeline-content">
 <h3>III Symposium on Theoretical and Computational Physics</h3>
 <p><strong>Yachay Tech University</strong> | 2026</p>
-<p>
-Presentation of relativistic polytrope energy exchange model, including analytical and numerical results.
-</p>
-
-<div class="actions">
-<button onclick="openModal('pdf1')">Preview</button>
-<a href="https://drive.google.com/file/d/1dVZ_u94TOkqpP0eWzNCYDlO69fYIa2Po/view" target="_blank">PDF</a>
-</div>
+<p>Presentation of relativistic polytrope energy exchange model.</p>
 </div>
 </div>
 
@@ -121,142 +214,42 @@ Presentation of relativistic polytrope energy exchange model, including analytic
 <div class="timeline-content">
 <h3>STEM Women Congress</h3>
 <p><strong>Ecuador</strong> | 2025</p>
-<p>
-Presentation of <strong>Avatar Tech</strong>, a satellite-data platform for climate resilience and Earth observation.
-</p>
-</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-content">
-<h3>XI School of Astronomy and Astrophysics</h3>
-<p><strong>Quito Observatory</strong> | 2025</p>
-<p>
-Poster on anisotropic relativistic systems and coupled polytropic models.
-</p>
-
-<div class="actions">
-<button onclick="openModal('pdf2')">Preview</button>
-<a href="https://drive.google.com/file/d/1680QigspCMG7O1ipbv_f8-uoiFC2q5Mk/view" target="_blank">PDF</a>
-</div>
-</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-content">
-<h3>Optical Analogues of Black Holes</h3>
-<p><strong>Escuela Politécnica Nacional</strong> | 2025</p>
-<p>
-Exploration of analog gravity systems and optical representations of spacetime curvature.
-</p>
-
-<div class="actions">
-<button onclick="openModal('pdf3')">Preview</button>
-<a href="https://drive.google.com/file/d/1G1goiGLK9vbB_tfBnKcLup104Swbwsio/view" target="_blank">PDF</a>
-</div>
-</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-content">
-<h3>Magnetic Irradiator Simulation</h3>
-<p><strong>International Physics Congress – ESPOCH</strong> | 2024</p>
-<p>
-Finite-element simulation and experimental validation of Helmholtz coil systems.
-</p>
-
-<div class="actions">
-<button onclick="openModal('pdf4')">Preview</button>
-<a href="https://drive.google.com/file/d/1ebfroOuVnsfHQvXC4WLkoN_qVo7v6Ei/view" target="_blank">PDF</a>
-</div>
-</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-content">
-<h3>Inca Astronomy & Cosmology</h3>
-<p><strong>TOAA IV Workshop</strong> | 2024</p>
-<p>
-Talk on ancestral astronomical knowledge and observational cosmology traditions.
-</p>
-
-<div class="actions">
-<button onclick="openModal('pdf5')">Preview</button>
-<a href="https://drive.google.com/file/d/1UGHEpQmlfDR-q4IRu7WhB05ONN25SArs/view" target="_blank">PDF</a>
-</div>
+<p>Presentation of <strong>Avatar Tech</strong>.</p>
 </div>
 </div>
 
 </div>
 </section>
 
-
-<!-- ================= CTA ================= -->
+<!-- ===== CTA ===== -->
 <section class="cta">
 <h2>Explore More</h2>
-
 <div class="social-buttons">
 <a class="button" href="cv.html">Full CV</a>
 <a class="button" href="index.html">Back Home</a>
 </div>
 </section>
 
-
-<!-- ================= MODAL ================= -->
+<!-- ===== MODAL ===== -->
 <div id="modal" class="modal">
 <span class="close" onclick="closeModal()">&times;</span>
 <iframe id="modalFrame"></iframe>
 </div>
 
-
-<!-- ================= SCRIPT ================= -->
+<!-- ===== SCRIPT ===== -->
 <script>
-function openModal(id){
-    const modal = document.getElementById("modal");
-    const frame = document.getElementById("modalFrame");
-
-    const links = {
-        pdf1: "https://drive.google.com/file/d/1dVZ_u94TOkqpP0eWzNCYDlO69fYIa2Po/preview",
-        pdf2: "https://drive.google.com/file/d/1680QigspCMG7O1ipbv_f8-uoiFC2q5Mk/preview",
-        pdf3: "https://drive.google.com/file/d/1G1goiGLK9vbB_tfBnKcLup104Swbwsio/preview",
-        pdf4: "https://drive.google.com/file/d/1ebfroOuVnsfHQvXC4WLkoN_qVo7v6Ei/preview",
-        pdf5: "https://drive.google.com/file/d/1UGHEpQmlfDR-q4IRu7WhB05ONN25SArs/preview"
-    };
-
-    frame.src = links[id];
-
-    modal.style.display = "flex";
-    setTimeout(() => modal.classList.add("show"), 10);
-}
-
-function closeModal(){
-    const modal = document.getElementById("modal");
-    const frame = document.getElementById("modalFrame");
-
-    modal.classList.remove("show");
-
-    setTimeout(() => {
-        modal.style.display = "none";
-        frame.src = "";
-    }, 300);
-}
-
 document.addEventListener("DOMContentLoaded", () => {
     const items = document.querySelectorAll('.timeline-item');
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if(entry.isIntersecting){
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = "translateX(0)";
+                entry.target.classList.add("show");
             }
         });
     });
 
-    items.forEach((item, index) => {
-        item.style.transition = `all 0.6s ease ${index * 0.1}s`;
-        observer.observe(item);
-    });
+    items.forEach(item => observer.observe(item));
 });
 </script>
 
