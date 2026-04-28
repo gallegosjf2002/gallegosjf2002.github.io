@@ -9,142 +9,46 @@
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
-
-/* ===== PAPER CARD ===== */
-.card.highlight {
-    border-left: 5px solid #0f9d7a;
-    background: white;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-    transition: 0.4s;
-}
-
-.card.highlight:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-}
-
-.publication-meta {
-    font-size: 0.9em;
-    color: #666;
-    margin-top: 10px;
-}
-
-/* links tipo paper */
-.project-links {
-    margin-top: 15px;
-}
-
-.project-links a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: #0f9d7a;
-    font-weight: 600;
-}
-
-/* ===== HORIZONTAL SCROLL ===== */
-.horizontal-scroll {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding: 20px 0;
-    scroll-snap-type: x mandatory;
-}
-
-.horizontal-scroll::-webkit-scrollbar {
-    height: 6px;
-}
-
-.horizontal-scroll::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 10px;
-}
-
-.mini-card {
-    min-width: 280px;
-    scroll-snap-align: start;
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-    transition: 0.4s;
-}
-
-.mini-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-}
-
-/* ===== TIMELINE ===== */
-.timeline-item {
-    opacity: 0;
-    transform: translateX(60px);
-}
-
-.timeline-item:nth-child(even) {
-    transform: translateX(-60px);
-}
-
-.timeline-item.show {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* ===== SECTIONS ===== */
-section {
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 20px;
-}
-
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-h2::after {
-    content: "";
-    width: 40px;
-    height: 3px;
-    background: #0f9d7a;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-}
-
-</style>
-
 </head>
 
 <body>
 
-<!-- ===== NAV ===== -->
+<!-- NAV -->
 <nav>
 <a href="index.html">Home</a>
 <a href="publications.html">Research</a>
-<a href="certificates.html">Certificates</a>
 <a href="teaching.html">Teaching</a>
+<a href="certificates.html">Certificates</a>
 </nav>
 
-<!-- ===== HERO ===== -->
-<header class="sub-hero">
-<div class="sub-hero-content">
-<h1>Research & Publications</h1>
-<p>
-My research focuses on relativistic fluid systems, gravitational decoupling, and numerical modeling of compact objects.
-I aim to connect rigorous mathematical physics with physically observable astrophysical phenomena.
-</p>
-</div>
-</header>
+<!-- HERO -->
+<div class="hero-container">
 
-<!-- ===== PUBLICATION ===== -->
+<div class="hero-info" style="margin:auto; text-align:center; max-width:800px;">
+
+<h1>Research & Publications</h1>
+
+<p class="hero-description">
+Focused on relativistic fluid systems, gravitational decoupling, and numerical modeling of compact objects.
+</p>
+
+<p style="opacity:0.7;">
+Bridging rigorous mathematical physics with observable astrophysical phenomena.
+</p>
+
+</div>
+
+</div>
+
+<!-- PUBLICATION STRIP -->
 <section>
 <h2>Publications & Preprints</h2>
 
-<div class="card highlight fade">
+<div class="horizontal-scroll">
 
-<h3>Energy Exchange in Relativistic Systems</h3>
+<div class="mini-card left">
+
+<h3>Relativistic Energy Exchange</h3>
 
 <p>
 Andrade, J. C., <strong>Gallegos, J. F.</strong>, Quizhpe, D., Moscoso-Martínez, M., Naseer, T.
@@ -154,14 +58,8 @@ Andrade, J. C., <strong>Gallegos, J. F.</strong>, Quizhpe, D., Moscoso-Martínez
 <em>Energy exchange between a relativistic polytrope and a Wyman IIa fluid</em>
 </p>
 
-<p>
-This work develops a coupled relativistic model using Einstein field equations, analyzing 
-energy transfer, stability conditions, and physical viability of anisotropic compact objects.
-</p>
-
-<p class="publication-meta">
-Research Square (Springer Nature) — under peer review in 
-<em>Astrophysics and Space Science</em> (2025)
+<p style="font-size:0.85em; opacity:0.8;">
+Coupled Einstein field equations, stability analysis, causality constraints, and physical viability of compact objects.
 </p>
 
 <div class="project-links">
@@ -170,35 +68,38 @@ Research Square (Springer Nature) — under peer review in
 </div>
 
 </div>
+
+</div>
 </section>
 
-<!-- ===== THEMES ===== -->
+<!-- RESEARCH THEMES -->
 <section>
-<h2>Research Themes</h2>
+<h2>Research Focus</h2>
 
 <div class="horizontal-scroll">
 
-<div class="mini-card">
-<h3>General Relativity</h3>
-<p>Nonlinear Einstein field equations and exact solutions for compact objects.</p>
+<div class="mini-card left">
+General Relativity
 </div>
 
 <div class="mini-card">
-<h3>Relativistic Fluids</h3>
-<p>Anisotropic matter distributions, stability analysis, and energy conditions.</p>
+Relativistic Fluids
+</div>
+
+<div class="mini-card left">
+Gravitational Decoupling
 </div>
 
 <div class="mini-card">
-<h3>Computational Physics</h3>
-<p>Numerical methods, GPU acceleration, and scientific modeling workflows.</p>
+Computational Physics
 </div>
 
 </div>
 </section>
 
-<!-- ===== TIMELINE ===== -->
+<!-- CONFERENCES (TIMELINE) -->
 <section>
-<h2>Conferences & Scientific Communication</h2>
+<h2>Scientific Communication</h2>
 
 <div class="timeline">
 
@@ -218,38 +119,67 @@ Research Square (Springer Nature) — under peer review in
 </div>
 </div>
 
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>XI School of Astronomy and Astrophysics</h3>
+<p><strong>Quito Observatory</strong> | 2025</p>
+<p>Poster on anisotropic relativistic systems.</p>
+</div>
+</div>
+
 </div>
 </section>
 
-<!-- ===== CTA ===== -->
+<!-- METRICS -->
+<section>
+<h2>Research Impact</h2>
+
+<div class="metrics">
+
+<div class="metric-card fade">
+<h3>1</h3>
+<p>Preprint</p>
+</div>
+
+<div class="metric-card fade">
+<h3>5+</h3>
+<p>Conferences</p>
+</div>
+
+<div class="metric-card fade">
+<h3>3+</h3>
+<p>Projects</p>
+</div>
+
+</div>
+</section>
+
+<!-- CTA -->
 <section class="cta">
 <h2>Explore More</h2>
+
 <div class="social-buttons">
 <a class="button" href="cv.html">Full CV</a>
 <a class="button" href="index.html">Back Home</a>
 </div>
 </section>
 
-<!-- ===== MODAL ===== -->
-<div id="modal" class="modal">
-<span class="close" onclick="closeModal()">&times;</span>
-<iframe id="modalFrame"></iframe>
-</div>
-
-<!-- ===== SCRIPT ===== -->
+<!-- SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const items = document.querySelectorAll('.timeline-item');
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add("show");
-            }
-        });
-    });
+const elements = document.querySelectorAll('.left, .right, .fade');
 
-    items.forEach(item => observer.observe(item));
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+elements.forEach(el => observer.observe(el));
+
 });
 </script>
 
