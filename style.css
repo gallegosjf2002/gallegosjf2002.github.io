@@ -476,3 +476,49 @@ section{
     background: #0f9d7a;
     color: white;
 }
+
+/* HERO SIMPLE PARA SUBPÁGINAS */
+.sub-hero {
+    padding: 80px 20px 40px;
+    text-align: center;
+}
+
+.sub-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.sub-hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* publicación */
+.publication-meta {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* botones */
+.actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.actions button {
+    background: #0f9d7a;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.actions a {
+    font-size: 0.85em;
+    color: #0f9d7a;
+}
