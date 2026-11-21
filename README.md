@@ -41,3 +41,15 @@ Open `index.html` locally or upload **all files and the `images/` directory** to
 ## Known limitations
 - English/Spanish toggle translates tagged headings and descriptions. Proper names, some detailed research lists, bibliographic titles, certificate records and certain supporting text remain in their source language to preserve accuracy. For full bilingual coverage, add translated strings to all remaining elements.
 - No backend, analytics, automated Google Drive synchronization or verified PDF CV is included.
+
+
+## CV update — November 2026
+- New pages: `leadership.html` and `awards.html` (including **Stipendium Hungaricum Scholarship**, 2026–present).
+- `cv.html` now reflects research profile, education, research directions, teaching, publications, schools, leadership, skills, languages and honors.
+- `publications.html` includes the new IGM 2026 talk (seven presentations total).
+- **Publication status is intentionally unverified**. Do not claim a DOI, publication, peer review or Research Square listing until confirmed.
+- To attach a conference poster, locate its record in `publications.html` and add `<a class="text-link" href="YOUR_VERIFIED_DRIVE_URL" target="_blank" rel="noopener noreferrer">Poster ↗</a>` within its `.link-row`.
+- To add an award, duplicate an `.experience-item` inside `awards.html` and update date, title and organization. Add the corresponding `data-en` / `data-es` translations when writing new copy.
+- To add certificates, edit `certificates-data.js`, set `links` to a verified public Google Drive PDF URL and check sharing permissions.
+- The EN/ES toggle translates fields marked `data-en` and `data-es`; unmarked scientific details remain in English and should be translated manually for full coverage.
+- For the final PDF CV, create `docs/Jorge_Gallegos_CV.pdf` and replace the placeholder in `cv.html`.
